@@ -17,7 +17,7 @@ class LogRouteActivityMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         // Check if logging is enabled
-        if (!config('trailwatch.logging.enabled', true)) {
+        if (! config('trailwatch.logging.enabled', true)) {
             return $next($request);
         }
 
@@ -45,14 +45,10 @@ class LogRouteActivityMiddleware
 
     /**
      * Check if a path matches any patterns (supports wildcards).
-     *
-     * @param  string|null  $path
-     * @param  array  $patterns
-     * @return bool
      */
     protected function matchesPath(?string $path, array $patterns): bool
     {
-        if (!$path) {
+        if (! $path) {
             return false;
         }
 
