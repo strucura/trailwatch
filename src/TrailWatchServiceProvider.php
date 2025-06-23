@@ -4,7 +4,6 @@ namespace Strucura\TrailWatch;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Strucura\TrailWatch\Commands\TrailWatchCommand;
 
 class TrailWatchServiceProvider extends PackageServiceProvider
 {
