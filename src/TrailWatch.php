@@ -12,18 +12,18 @@ class TrailWatch
         ?string $ipAddress,
         ?string $userAgent,
         ?int $userId
-    ): ?RouteActivity {
+    ): void {
         if (!config('trailwatch.logging.enabled', true)) {
-            return null;
+            return;
         }
 
         $excludedNames = config('trailwatch.logging.exclude.names', []);
         $excludedPaths = config('trailwatch.logging.exclude.paths', []);
         if (in_array($routeName, $excludedNames) || $this->matchesPath($routePath, $excludedPaths)) {
-            return null;
+            return;
         }
 
-        return RouteActivity::query()->create([
+        RouteActivity::query()->create([
             'name' => $routeName,
             'path' => $routePath,
             'ip_address' => config('trailwatch.logging.log_ip', true) ? $ipAddress : null,

@@ -5,7 +5,6 @@ namespace Strucura\TrailWatch\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Strucura\TrailWatch\Facades\TrailWatch;
-use Strucura\TrailWatch\Models\RouteActivity;
 use Symfony\Component\HttpFoundation\Response;
 
 class LogRouteActivityMiddleware
