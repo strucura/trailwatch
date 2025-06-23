@@ -20,4 +20,3 @@ class RouteActivity extends Model
         return $this->belongsTo(config('auth.providers.users.model'), 'user_id');
     }
 }
-
