@@ -5,7 +5,7 @@ namespace Strucura\RouteEvents\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class RouteEvent extends Model
+class RouteActivity extends Model
 {
     protected $fillable = [
         'name',
