@@ -1,6 +1,6 @@
 <?php
 
-namespace Strucura\RouteEvents\Models;
+namespace Strucura\TrailWatch\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

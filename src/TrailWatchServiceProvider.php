@@ -15,8 +15,8 @@ class TrailWatchServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('route_events')
+            ->name('trail-watch')
             ->hasConfigFile()
-            ->hasMigration('create_route_events_table');
+            ->hasMigration('create_route_activities_table');
     }
 }
