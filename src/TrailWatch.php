@@ -13,7 +13,7 @@ class TrailWatch
         ?string $userAgent,
         ?int $userId
     ): void {
-        if (!config('trailwatch.logging.enabled', true)) {
+        if (! config('trailwatch.logging.enabled', true)) {
             return;
         }
 
@@ -34,7 +34,7 @@ class TrailWatch
 
     protected function matchesPath(?string $path, array $patterns): bool
     {
-        if (!$path) {
+        if (! $path) {
             return false;
         }
 
