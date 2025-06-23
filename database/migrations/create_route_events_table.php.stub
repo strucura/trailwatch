@@ -1,0 +1,27 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+        {
+            Schema::create('route_events', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->string('name')->nullable()->index();
+                $table->string('path')->nullable()->index();
+                $table->string('user_agent')->nullable()->index();
+                $table->ipAddress()->nullable()->index();
+                $table->foreignIdFor(config('auth.providers.users.model'))->nullable()->constrained();
+                $table->timestamps();
+                $table->softDeletes();
+            });
+        }
+
+        public function down(): void
+        {
+            Schema::dropIfExists('route_events');
+        }
+};
