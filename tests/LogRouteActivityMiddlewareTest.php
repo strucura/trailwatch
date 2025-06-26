@@ -1,9 +1,12 @@
 <?php
 
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Route;
 use Strucura\TrailWatch\Http\Middleware\LogRouteActivityMiddleware;
+
+uses(DatabaseTransactions::class);
 
 it('logs route activity when all conditions are met', function () {
     Config::set('trailwatch.logging.enabled', true);
