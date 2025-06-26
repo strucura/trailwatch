@@ -1,7 +1,7 @@
 # Tracks and reports upon api usage.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/strucura/trailwatch.svg?style=flat-square)](https://packagist.org/packages/strucura/trailwatch)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/strucura/trailwatch/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/strucura/trailwatch/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/strucura/trailwatch/run-tests.yml?branch=0.x&label=tests&style=flat-square)](https://github.com/strucura/trailwatch/actions?query=workflow%3Arun-tests+branch%3A0.x)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/strucura/trailwatch/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/strucura/trailwatch/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/strucura/trailwatch.svg?style=flat-square)](https://packagist.org/packages/strucura/trailwatch)
 
