@@ -4,7 +4,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Route;
 use Strucura\TrailWatch\Http\Middleware\LogRouteActivityMiddleware;
-use Strucura\TrailWatch\Models\RouteActivity;
 
 it('logs route activity when all conditions are met', function () {
     Config::set('trailwatch.logging.enabled', true);
@@ -16,7 +15,7 @@ it('logs route activity when all conditions are met', function () {
     });
 
     // Call the middleware
-    $middleware = new LogRouteActivityMiddleware();
+    $middleware = new LogRouteActivityMiddleware;
     $middleware->handle($request, function ($req) {
         return response('OK');
     });
@@ -36,7 +35,7 @@ it('does not log when logging is disabled', function () {
         return Route::get('/test-route')->name('test-route');
     });
 
-    $middleware = new LogRouteActivityMiddleware();
+    $middleware = new LogRouteActivityMiddleware;
     $middleware->handle($request, function ($req) {
         return response('OK');
     });
